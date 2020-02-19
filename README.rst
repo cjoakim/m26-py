@@ -165,8 +165,9 @@ See `m26-py at GitHub <https://github.com/cjoakim/m26-py>`_ .
 Changelog
 =========
 
-Version 0.2.0
+Version 0.2.1
 -------------
 
+-  2020/02/19. Version 0.2.1,  Jinja2 upgrade
 -  2017/09/27. Version 0.2.0,  Converted to the pytest testing framework; coverage at 100%.
 -  2015/10/31. Initial Production release.
