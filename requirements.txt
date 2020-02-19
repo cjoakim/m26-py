@@ -11,7 +11,7 @@ check-manifest==0.27
 coverage==4.0.2           # via pytest-cov
 docutils==0.12            # via rstcheck, sphinx
 flake8==2.5.0
-jinja2==2.8               # via sphinx
+jinja2==2.11.1
 markupsafe==0.23          # via jinja2
 mccabe==0.3.1             # via flake8
 pep8==1.5.7               # via flake8
