@@ -1,12 +1,12 @@
 #!/bin/bash
 
-source bin/activate
-
 echo 'checking the source code with flake8 ...'
-flake8 m26 --ignore F401
+#flake8 m26 --ignore F401
 
 echo 'executing unit tests with code coverage ...'
-pytest -v --cov=m26/ --cov-report html tests/
+# pytest -v --cov=m26/ --cov-report html tests/
+
+python -m pytest --cov=m26/ --cov-report html tests/
 
 # For sdist deployment to PyPi, or local PyPi server:
 # python setup.py sdist
