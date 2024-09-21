@@ -68,5 +68,5 @@ if __name__ == "__main__":
     print(graded)
 
     zones = a2.training_zones()
-    print(json.dumps(zones, sort_keys=True, indent=2))
+    # print(json.dumps(zones, sort_keys=True, indent=2))
     print("")

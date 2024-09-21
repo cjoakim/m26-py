@@ -34,7 +34,7 @@ setup(
     ),
     # Run-time dependencies; these will be installed by pip when the project is installed.
     # See https://packaging.python.org/en/latest/requirements.html
-    install_requires=["arrow"],
+    install_requires=[],
     # Dev and Test dependencies, install like this: $ pip install -e .[dev,test]
     extras_require={
         "dev": ["check-manifest", "black", "rstcheck", "Sphinx"],

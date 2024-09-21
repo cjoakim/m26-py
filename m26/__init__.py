@@ -7,7 +7,6 @@ VERSION = __version__
 m26 library
 """
 
-import arrow
 import math
 
 from numbers import Number
