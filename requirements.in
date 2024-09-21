@@ -1,0 +1,11 @@
+# pip
+
+Jinja2>=2.10.1
+
+arrow
+check-manifest
+black
+pytest==8.3.3
+pytest-cov==5.0.0
+rstcheck
+Sphinx
