@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
 
-# To use a consistent encoding
 from codecs import open
 from os import path
 
@@ -12,30 +11,20 @@ with open(path.join(here, "README.rst"), encoding="utf-8") as f:
 
 setup(
     name="m26",
-    # Versions should comply with PEP440.
     version="0.3.0",
     description="m26 is a python library for speed and pace calculations for sports like running and cycling",
     long_description=long_description,
     url="https://github.com/cjoakim/m26-py",
-    # Author details
     author="Christopher Joakim",
     author_email="christopher.joakim@gmail.com",
     license="MIT",
-    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        # How mature is this project? Common values are
-        #   3 - Alpha
-        #   4 - Beta
-        #   5 - Production/Stable
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.12",
     ],
     keywords="calculator running cycling swimming pace-per-mile mph age-grading",
     # You can just specify the packages manually here if your project is simple.
@@ -48,7 +37,7 @@ setup(
     install_requires=["arrow"],
     # Dev and Test dependencies, install like this: $ pip install -e .[dev,test]
     extras_require={
-        "dev": ["check-manifest", "black"],
-        "test": ["coverage", "pytest", "pytest-cov"],
+        "dev": ["check-manifest", "black", "rstcheck", "Sphinx"],
+        "test": ["pytest", "pytest-cov", "coverage"],
     },
 )
