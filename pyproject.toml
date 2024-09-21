@@ -1,0 +1,22 @@
+[project]
+name = "m26"
+version = "0.3.0"
+authors = [
+  { name="Chris Joakim", email="christopher.joakim@gmail.com" },
+]
+description = "m26 - calculations for sports like running, cycling, and swimming"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/cjoakim/m26-py"
+Issues = "https://github.com/cjoakim/m26-py/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

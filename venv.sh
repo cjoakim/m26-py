@@ -7,6 +7,9 @@
 mkdir -p venv 
 rm -rf venv 
 
+echo 'upgrading pip ...'
+python3 -m pip install --upgrade pip
+
 echo 'creating new python3 virtual environment in the venv directory ...'
 python3 -m venv venv
 
@@ -33,8 +36,14 @@ pip-compile --output-file requirements.txt requirements.in
 echo 'pip install requirements.txt ...'
 pip install -q -r requirements.txt
 
+echo 'activating venv ...'
+source venv/bin/activate
+
+echo 'upgrading pip setuptools wheel ...'
+pip install --upgrade pip setuptools wheel
+
 echo 'pip list ...'
 pip list > pip_list.txt
 pip list
 
-echo 'done; next -> source venv/bin/activate'
+echo 'done'
