@@ -8,7 +8,7 @@ prune   bin
 prune   htmlcov
 
 exclude pyvenv.cfg
-exclude examples.py
+exclude m26-py-examples.py
 
 include README.rst
 include LICENSE
