@@ -1,10 +1,15 @@
 [project]
 name = "m26"
+license = {file = "LICENSE"}
 version = "0.3.0"
 authors = [
-  { name="Chris Joakim", email="christopher.joakim@gmail.com" },
+  {name = "Chris Joakim", email = "christopher.joakim@gmail.com" }
+]
+maintainers = [
+  {name = "Chris Joakim", email = "christopher.joakim@gmail.com" }
 ]
 description = "m26 - calculations for sports like running, cycling, and swimming"
+keywords = ["calculator", "running", "cycling", "swimming", "pace per mile"]
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [
@@ -16,6 +21,7 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/cjoakim/m26-py"
 Issues = "https://github.com/cjoakim/m26-py/issues"
+Repository = "https://github.com/cjoakim/m26-py.git"
 
 [build-system]
 requires = ["hatchling"]
