@@ -1,4 +1,4 @@
-# m26-py
+# m26
 
 m26 - calculations for sports like running, cycling, and swimming
 

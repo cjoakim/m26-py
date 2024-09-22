@@ -39,7 +39,14 @@ include = [
   "/tests",
 ]
 exclude = [
-  ".gitignore",
   "*.sh",
-  "obsolete/",
+  "*.ps1",
+  "*.json",
+  "*.txt",
+  "*.xml",
+  ".DS_Store",
+  ".gitignore",
+  ".coverage/",
+  ".pytest_cache/",
+  "test_project/"
 ]
