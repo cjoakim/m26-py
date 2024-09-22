@@ -7,7 +7,13 @@ rm -rf dist/
 
 python3 -m build
 
-# Check the contents of the build file:
-#   cd dist/
-#   gunzip m26-0.3.0.tar.gz
-#   tar tvf m26-0.3.0.tar
+if [ "$1" = "explode" ]
+then
+    # explode the tar file and list its contents
+    cd dist/
+    gunzip m26-0.3.0.tar.gz
+    tar tvf m26-0.3.0.tar > m26.tar.contents.txt
+    tar xvf m26-0.3.0.tar
+    cat m26.tar.contents.txt
+    cd ..
+fi

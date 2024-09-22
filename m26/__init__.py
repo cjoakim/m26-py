@@ -1,13 +1,12 @@
-__author__ = "cjoakim"
-__version__ = "0.2.1"
+__author__ = "Chris Joakim <christopher.joakim@gmail.com>"
+__version__ = "0.3.0"
 
+AUTHOR = __author__
 VERSION = __version__
 
 """
-m26 library
+m26 library 
 """
-
-import math
 
 from numbers import Number
 

@@ -1,6 +1,4 @@
 
-import pytest
-
 import m26
 
 # pytest -v tests/test_age_calculator.py
