@@ -4,63 +4,83 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-alabaster==0.7.6
-    # via sphinx
-babel==2.1.1
-    # via sphinx
 black==24.8.0
     # via -r requirements.in
-check-manifest==0.27
-    # via -r requirements.in
+certifi==2024.8.30
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via black
 coverage[toml]==7.6.1
     # via pytest-cov
-docutils==0.12
-    # via
-    #   rstcheck
-    #   sphinx
+docutils==0.21.2
+    # via readme-renderer
+idna==3.10
+    # via requests
+importlib-metadata==8.5.0
+    # via twine
 iniconfig==2.0.0
     # via pytest
-jinja2==2.11.1
-    # via sphinx
-markupsafe==0.23
-    # via jinja2
+jaraco-classes==3.4.0
+    # via keyring
+jaraco-context==6.0.1
+    # via keyring
+jaraco-functools==4.0.2
+    # via keyring
+keyring==25.4.1
+    # via twine
+markdown-it-py==3.0.0
+    # via rich
+mdurl==0.1.2
+    # via markdown-it-py
+more-itertools==10.5.0
+    # via
+    #   jaraco-classes
+    #   jaraco-functools
 mypy-extensions==1.0.0
     # via black
+nh3==0.2.18
+    # via readme-renderer
 packaging==24.1
     # via
     #   black
     #   pytest
 pathspec==0.12.1
     # via black
+pkginfo==1.10.0
+    # via twine
 platformdirs==4.3.6
     # via black
 pluggy==1.5.0
     # via pytest
-pygments==2.0.2
-    # via sphinx
+pygments==2.18.0
+    # via
+    #   readme-renderer
+    #   rich
 pytest==8.3.3
     # via
     #   -r requirements.in
     #   pytest-cov
 pytest-cov==5.0.0
     # via -r requirements.in
-pytz==2015.7
-    # via babel
-rstcheck==1.4.1
-    # via -r requirements.in
-six==1.10.0
-    # via sphinx
-snowballstemmer==1.2.0
-    # via sphinx
-sphinx==1.3.1
+readme-renderer==44.0
+    # via twine
+requests==2.32.3
     # via
-    #   -r requirements.in
-    #   rstcheck
-    #   sphinx-rtd-theme
-sphinx-rtd-theme==0.1.9
-    # via sphinx
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
+    #   requests-toolbelt
+    #   twine
+requests-toolbelt==1.0.0
+    # via twine
+rfc3986==2.0.0
+    # via twine
+rich==13.8.1
+    # via twine
+twine==5.1.1
+    # via -r requirements.in
+urllib3==2.2.3
+    # via
+    #   requests
+    #   twine
+zipp==3.20.2
+    # via importlib-metadata
