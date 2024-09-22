@@ -22,27 +22,10 @@ class AgeCalculator(object):
             format = "%Y-%m-%d"
             birth_datetime = datetime.datetime.strptime(birth_yyyy_mm_dd, format)
             asof_datetime = datetime.datetime.strptime(as_of_yyyy_mm_dd, format)
-            if False:
-                print(
-                    "{} {}".format(birth_datetime, str(type(birth_datetime)))
-                )  # <class 'datetime.datetime'>
-                print("birth_datetime ts: {}".format(birth_datetime.timestamp()))
-                print("asof_datetime  ts: {}".format(asof_datetime.timestamp()))
-
-            if birth_datetime and asof_datetime:
-                birth_ts = birth_datetime.timestamp()
-                asof_ts = asof_datetime.timestamp()
-                diff = float(asof_ts - birth_ts)
-                years = diff / self.seconds_per_year()
-                return Age(years)
-            else:
-                return None
-
-            # if birth_date and asof_date:
-            # birth_ts = birth_date.timestamp
-            # asof_ts = asof_date.timestamp
-            # diff = float(asof_ts - birth_ts)
-            # years = diff / self.seconds_per_year()
-            # return Age(years)
+            birth_ts = birth_datetime.timestamp()
+            asof_ts = asof_datetime.timestamp()
+            diff = float(asof_ts - birth_ts)
+            years = diff / self.seconds_per_year()
+            return Age(years)
         else:
             return None

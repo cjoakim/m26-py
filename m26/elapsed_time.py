@@ -39,12 +39,10 @@ class ElapsedTime(object):
             elif len(tokens) == 2:
                 self.mm = self.to_float(tokens[0])
                 self.ss = self.to_float(tokens[1])
-            elif len(tokens) == 3:
+            else:
                 self.hh = self.to_float(tokens[0])
                 self.mm = self.to_float(tokens[1])
                 self.ss = self.to_float(tokens[2])
-            else:
-                pass
 
         self.secs = (self.hh * 3600.0) + (self.mm * 60.0) + self.ss
 
