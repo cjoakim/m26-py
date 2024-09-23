@@ -203,8 +203,9 @@ projected_time, riegel: 04:32:32
 
 ## Changelog
 
-Current version: 0.3.0
+Current version: 0.3.1
 
+-  2024/09/23, version 0.3.1, Class AgeCalculator modified to use datetime delta for mac/win consistency
 -  2024/09/21, version 0.3.0, Removed arrow dependency, upgraded to python 3.12
 -  2020/02/19, version 0.2.1, Jinja2 upgrade
 -  2017/09/27, version 0.2.0, Converted to the pytest testing framework; coverage at 100%.

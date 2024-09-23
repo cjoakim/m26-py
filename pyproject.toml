@@ -1,7 +1,7 @@
 [project]
 name = "m26"
 license = {file = "LICENSE"}
-version = "0.3.0"
+version = "0.3.1"
 authors = [
   {name = "Chris Joakim", email = "christopher.joakim@gmail.com" }
 ]
