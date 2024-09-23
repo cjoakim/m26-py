@@ -1,6 +1,7 @@
 __author__ = "cjoakim"
 
-import datetime
+from datetime import datetime
+import traceback
 
 from .age import Age
 
@@ -17,15 +18,18 @@ class AgeCalculator(object):
         return float(cls.seconds_per_year() * 1000.0)
 
     @classmethod
-    def calculate(self, birth_yyyy_mm_dd, as_of_yyyy_mm_dd):
-        if birth_yyyy_mm_dd:
-            format = "%Y-%m-%d"
-            birth_datetime = datetime.datetime.strptime(birth_yyyy_mm_dd, format)
-            asof_datetime = datetime.datetime.strptime(as_of_yyyy_mm_dd, format)
-            birth_ts = birth_datetime.timestamp()
-            asof_ts = asof_datetime.timestamp()
-            diff = float(asof_ts - birth_ts)
-            years = diff / self.seconds_per_year()
-            return Age(years)
+    def calculate(cls, birth_yyyy_mm_dd, as_of_yyyy_mm_dd):
+        if birth_yyyy_mm_dd and as_of_yyyy_mm_dd:
+            try:
+                date_format = "%Y-%m-%d"
+                birth_datetime = datetime.strptime(birth_yyyy_mm_dd, date_format)
+                as_of_datetime = datetime.strptime(as_of_yyyy_mm_dd, date_format)
+                delta = as_of_datetime - birth_datetime
+                years = delta.total_seconds() / cls.seconds_per_year()
+                return Age(float(years))
+            except Exception as e:
+                print("AgeCalculator#calculate() exception: {}".format(e))
+                print(traceback.format_exc())
+                return None
         else:
             return None
