@@ -2,7 +2,7 @@ import m26
 
 
 def test_version():
-    assert m26.VERSION == "0.3.1"
+    assert m26.VERSION == "0.3.2"
 
 
 def test_author():
