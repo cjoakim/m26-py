@@ -1,6 +1,6 @@
 [project]
 name = "m26"
-version = "0.1.0"
+version = "0.4.0"
 dependencies = [
   "black",
   "pytest==8.3.3",
