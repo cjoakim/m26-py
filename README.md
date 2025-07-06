@@ -203,8 +203,9 @@ projected_time, riegel: 04:32:32
 
 ## Changelog
 
-Current version: 0.3.2
+Current version: 0.4.0
 
+-  2025/07/xx, version 0.4.0, python 3.12 & 3.13.  uv and pyproject.toml tooling
 -  2024/09/24, version 0.3.2, python 3.11 support
 -  2024/09/23, version 0.3.1, Class AgeCalculator modified to use datetime delta for mac/win consistency
 -  2024/09/21, version 0.3.0, Removed arrow dependency, upgraded to python 3.12
