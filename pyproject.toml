@@ -36,7 +36,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cjoakim/"
+Homepage = "https://github.com/cjoakim/m26-py"
 
 [tool.setuptools.packages.find]
 include = ['m26']
