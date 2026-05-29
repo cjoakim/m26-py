@@ -6,7 +6,6 @@ from .speed import Speed
 
 
 class RunWalkCalculator(object):
-
     @classmethod
     def calculate(cls, run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles):
         result = dict()
@@ -24,9 +23,7 @@ class RunWalkCalculator(object):
             distance = Distance(float(miles))
             mile = Distance(float(1.0))
 
-            total_secs = float(
-                run_duration_elapsed_time.secs + walk_duration_elapsed_time.secs
-            )
+            total_secs = float(run_duration_elapsed_time.secs + walk_duration_elapsed_time.secs)
             run_pct = float(run_duration_elapsed_time.secs / total_secs)
             walk_pct = float(1.0 - run_pct)
 

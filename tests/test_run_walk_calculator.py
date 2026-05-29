@@ -18,9 +18,7 @@ def test_calculate_all_walking():
     walk_ppm = "18:00"
     miles = "3.333"
 
-    result = m26.RunWalkCalculator.calculate(
-        run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles
-    )
+    result = m26.RunWalkCalculator.calculate(run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles)
     log_result(result)
 
     assert_almost_equal(result["avg_mph"], 3.33333333)
@@ -42,9 +40,7 @@ def test_calculate_all_running():
     walk_ppm = "18:00"
     miles = "3.333"
 
-    result = m26.RunWalkCalculator.calculate(
-        run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles
-    )
+    result = m26.RunWalkCalculator.calculate(run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles)
     log_result(result)
 
     assert_almost_equal(result["avg_mph"], 6.66666666)
@@ -66,9 +62,7 @@ def test_calculate_1_to_1_run_walk():
     walk_ppm = "16:00"
     miles = "4.0"
 
-    result = m26.RunWalkCalculator.calculate(
-        run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles
-    )
+    result = m26.RunWalkCalculator.calculate(run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles)
     log_result(result)
 
     assert_almost_equal(result["avg_mph"], 5.0000000)
@@ -90,9 +84,7 @@ def test_calculate_9_to_1_marathon():
     walk_ppm = "18:00"
     miles = "26.2"
 
-    result = m26.RunWalkCalculator.calculate(
-        run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles
-    )
+    result = m26.RunWalkCalculator.calculate(run_hhmmss, run_ppm, walk_hhmmss, walk_ppm, miles)
     log_result(result)
 
     assert_almost_equal(result["avg_mph"], 6.0606060606060606)

@@ -7,7 +7,6 @@ from .age import Age
 
 
 class AgeCalculator(object):
-
     @classmethod
     def seconds_per_year(cls):
         # seconds * minutes * hours * days

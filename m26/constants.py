@@ -2,7 +2,6 @@ __author__ = "cjoakim"
 
 
 class Constants(object):
-
     @classmethod
     def uom_miles(cls):
         return "m"

@@ -3,7 +3,6 @@ import json
 import m26
 
 if __name__ == "__main__":
-
     d1 = m26.Distance(26.2)
     print(d1)
     print("d1, as_miles:      {0}".format(d1.as_miles()))

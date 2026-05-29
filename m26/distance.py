@@ -4,7 +4,6 @@ from .constants import Constants
 
 
 class Distance(object):
-
     def __init__(self, dist=0.0, uom=Constants.uom_miles()):
         self.value = float(dist)
         self.uom = self.unit_of_measure(uom)

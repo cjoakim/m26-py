@@ -6,7 +6,6 @@ from .elapsed_time import ElapsedTime
 
 
 class Speed(object):
-
     def __init__(self, d, et):
         self.dist = d  # an instance of Distance
         self.etime = et  # an instance of ElapsedTime

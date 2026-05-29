@@ -8,7 +8,6 @@ from .constants import Constants
 
 
 class ElapsedTime(object):
-
     def __init__(self, val):
         self.secs = 0
         self.hh = 0
