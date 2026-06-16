@@ -14,9 +14,9 @@
   - See https://docs.python.org/3/library/venv.html
   - A project-specific version of python and the associated libraries the project uses
 - The virtual environment must be **activated** in terminal/powershell when you enter the project directory
-  - linux/mac: source .venv/bin/activate
-  - windows: .\.venv\Scripts\activate
-  - Pro-Tip: use a bash alias or PowerShell function to activate a venv
+  - linux/mac: **source .venv/bin/activate**
+  - windows: **.\.venv\Scripts\activate**
+  - Pro-Tip: use a bash alias or PowerShell function to activate a venv.  See below
 - The **uv** program is the fast and modern alternative to **pip** for installing libraries into a venv
   - See https://docs.astral.sh/uv/
   - See related program "ruff" for code formatting
@@ -25,6 +25,20 @@
   - See https://docs.python.org/3/library/index.html
   - Some incompatible sets of libraries can result in "dependency hell"
 
+
+#### venv activation helpers
+
+Alias in ~/.bash_profile
+```
+alias sba='source .venv/bin/activate ; python --version'
+```
+
+Function in Windows Profile
+```
+function activate {
+    .\venv\Scripts\Activate.ps1
+}
+```
 
 #### uv pip list
 
@@ -158,9 +172,10 @@ See the above example.
 
 A curated list of my favorite libraries.
 
-- General
+- **General**
   - https://pypi.org/project/dotenv/ - Load environment variables from a git-ignored .env file
   - https://pypi.org/project/docopt/ - Use a multiline header comment for CLI usage help content
+  - https://pypi.org/project/pylint/ - Python code static checker (i.e - linter)
   - https://pypi.org/project/Jinja2/ - Text template engine
   - https://pypi.org/project/BeautifulSoup/ - HTML parsing
   - https://pypi.org/project/lxml/ - XML parsing, including SAX API
@@ -170,12 +185,12 @@ A curated list of my favorite libraries.
   - https://pypi.org/project/jupyter/ - Jupyter Notebooks
   - https://pypi.org/project/networkx/ - Networks and graphs
   - https://pypi.org/project/reportlab/ - PDF generation
-- Testing
+- **Testing**
   - https://pypi.org/project/pytest/ - Unit-testing framework
   - https://pypi.org/project/pytest-cov/ - Code coverage
   - https://pypi.org/project/pytest-asyncio/ - Pytest support for asyncio
   - https://pypi.org/project/Faker/ - Synthetic data generator
-- Database
+- **Database**
   - https://pypi.org/project/cosmos/ - Azure Cosmos DB
   - https://pypi.org/project/pymongo/ - MongoDB 
   - https://pypi.org/project/psycopg2/ - Driver for PostgreSQL
@@ -183,7 +198,7 @@ A curated list of my favorite libraries.
   - https://pypi.org/project/SQLAlchemy/ - ORM if you're not using Django
   - https://pypi.org/project/alembic/ - Database migration tool for SQLAlchemy
   - https://pypi.org/project/duckdb/ - Not really a DB.  In-memory.  Fetch remote CSVs.
-- Web
+- **Web**
   - https://pypi.org/project/Django/ - Web application framework, best for RDBMS based apps
   - https://pypi.org/project/fastapi/ - Fast async web service framework
   - https://pypi.org/project/fastmcp/ - Build MCP servers and clients
@@ -194,12 +209,33 @@ A curated list of my favorite libraries.
     - Generally avoid Flask as it is synchronous.  Use either fastapi or django instead
   - https://pypi.org/project/Quart/ - An async version of Flask
     - I prefer fastapi or django instead
-- AI
+- **AI**
   - https://pypi.org/project/openai/ - OpenAI SDK
   - https://pypi.org/project/agent-framework/ - Microsoft Agent Framework
-  - azure-ai-documentintelligence - Azure Document Intelligence
+  - https://pypi.org/project/azure-ai-documentintelligence/ - Azure Document Intelligence
   - https://pypi.org/project/tiktoken/ - Token counter/tokenizer
   - https://pypi.org/project/tenacity/ - Automatic retries, on 429s, with exponential-backoff
-- Other Azure PaaS Services
+- **Other Azure PaaS Services**
   - https://pypi.org/project/azure-storage-blob/ - Azure Storage
   - https://pypi.org/project/azure-search-documents/ - Azure Search
+- **AWS**
+  - https://pypi.org/project/boto3/ - For S3, etc..  Perhaps the most popular library at PyPI.
+
+---
+
+## Code examples in this repo
+
+- m26/age_calculator.py - defines class AgeCalculator with **class methods** (@classmethod)
+- m26/distance.py - defines class Distance with **instance methods** and a constructor method (__init__)
+- m26/__init__.py - marks a directory as a python package (i.e. - m26).  See the main README.md
+
+---
+
+## Azure SDK for Python
+
+A monorepo for all Azure Python libraries.
+See https://github.com/Azure/azure-sdk-for-python
+
+### Azure Examples
+
+- https://github.com/pamelafox
